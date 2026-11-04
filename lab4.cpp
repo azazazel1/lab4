@@ -24,9 +24,11 @@ void tabliczkamnozenia();
 void zmiennaaib();
 int wypisznajmniejsza(int x, int y, int z);
 int pole(double podstawa, double wysokosc);
+int dzielniki(int n);
 
 int main()
 {
+    int n;
 	double podstawa, wysokosc;
 	int x, y, z;
     int a = 45, b = 25;
@@ -59,7 +61,10 @@ int main()
 	cin >> wysokosc;
 
     cout << "podwojna wartoœæ pola:" <<(pole(podstawa, wysokosc)) << endl;
-		
+	
+	cout << "Podaj liczbe do znalezienia dzielnikow: ";
+    cin >> n;
+    cout << dzielniki(n);
     
 
     return 0;
@@ -154,7 +159,21 @@ zwraca pole trojkata zwykle w swirku
 zwraca podwojna wartosc w main
 */
 
+int dzielniki(int n) {
+    for (int i = 1; i <= n; ++i) {
+        if (n % i == 0) {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+    return n;
+}
 
+/*
+zad6
+pobiera liczbe n
+wyswietla wszystkie dzielniki liczby n z modulo
+*/
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
