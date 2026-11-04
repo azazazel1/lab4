@@ -3,7 +3,7 @@
 
 
 /*
-* zad1
+* zad0
 start: a=45, b=25, globalna=10.
 dodawanie(): dziala na kopiach, zwraca 70 (suma=70). a i b bez zmian.
 main(): a += 4 -> a roœnie do 49.
@@ -22,9 +22,11 @@ void wyswietlanie(int a, int b);
 void imie();
 void tabliczkamnozenia();
 void zmiennaaib();
+int wypisznajmniejsza(int x, int y, int z);
 
 int main()
 {
+	int x, y, z;
     int a = 45, b = 25;
     int suma = dodawanie(a, b);
     cout << "Jesli dodam " << a << " do " << b << " to otrzymam " << suma << endl;
@@ -38,6 +40,20 @@ int main()
 	tabliczkamnozenia();
 
     zmiennaaib();
+
+    cout << "Podaj liczbe x: ";
+    cin >> x;
+    cout << "Podaj liczbe y: ";
+    cin >> y;
+    cout << "Podaj liczbe z: ";
+    cin >> z;
+
+    
+    cout << wypisznajmniejsza(x,y,z) ;
+    
+    
+		
+    
 
     return 0;
 }
@@ -61,7 +77,7 @@ void imie() {
     cout << "Czesc " << imie << endl;
 }
 /*
-* zad2
+* zad1
 zmienna char pobiera imie
 cout wypisuje imie
 */
@@ -76,26 +92,49 @@ void tabliczkamnozenia() {
     }
 }
 /*
-zad3
+zad2
 zmienna i to licznik wierszy, j to licznik kolumn
 cout wypisuje wynik mnozenia i*j, \t to tabulator, \n to nowa linia
 */
 void zmiennaaib(){
     int a;
     int b;
-	cout << "Podaj liczbe a: ";
+	cout << "Podaj liczbe a: \n";
     cin >> a;
-    cout << "Podaj liczbe b: ";
+    cout << "Podaj liczbe b: \n";
     cin >> b;
     if (a > b) {
-        cout << a;
+        cout << a << endl;
     }
     else {
-		cout << b;
+		cout << b << endl;
     }
 }
+/*
+zad3
+pobiera dwie liczby a i b
+zwraca wieksza liczbe
+*/
 
+int wypisznajmniejsza(int x, int y, int z) {
 
+	
+    if (x <= y && x <= z) {
+        cout << "Najmniejsza liczba to: " << x << endl;
+    }
+    else if (y <= x && y <= z) {
+        cout << "Najmniejsza liczba to: " << y << endl;
+    }
+    else {
+        cout << "Najmniejsza liczba to: " << z << endl;
+	}
+	return 0;
+}
+/*
+zad4
+pobiera trzy liczby x,y,z
+zwraca najmniejsza liczbe
+*/
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
