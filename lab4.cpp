@@ -23,9 +23,11 @@ void imie();
 void tabliczkamnozenia();
 void zmiennaaib();
 int wypisznajmniejsza(int x, int y, int z);
+int pole(double podstawa, double wysokosc);
 
 int main()
 {
+	double podstawa, wysokosc;
 	int x, y, z;
     int a = 45, b = 25;
     int suma = dodawanie(a, b);
@@ -51,7 +53,12 @@ int main()
     
     cout << wypisznajmniejsza(x,y,z) ;
     
-    
+	cout << "Podaj podstawe trojkata: ";
+    cin >> podstawa;
+	cout << "Podaj wysokosc trojkata: ";
+	cin >> wysokosc;
+
+    cout << "podwojna wartoœæ pola:" <<(pole(podstawa, wysokosc)) << endl;
 		
     
 
@@ -135,6 +142,19 @@ zad4
 pobiera trzy liczby x,y,z
 zwraca najmniejsza liczbe
 */
+
+int pole(double podstawa, double wysokosc) {
+	cout << "Pole trojkata o podstawie " << podstawa << " i wysokosci " << wysokosc << " wynosi: " << (podstawa * wysokosc) / 2 << endl;
+	return (podstawa * wysokosc);
+}
+/*
+zad5
+pobiera podstawe i wysokosc trojkata
+zwraca pole trojkata zwykle w swirku
+zwraca podwojna wartosc w main
+*/
+
+
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
